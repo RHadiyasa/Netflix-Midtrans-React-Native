@@ -46,6 +46,8 @@ const LoginScreen = () => {
         payload: user,
       });
 
+      setUsername("");
+      setPassword("");
       navigation.navigate("Profile");
     } catch (error) {
       console.error(error);

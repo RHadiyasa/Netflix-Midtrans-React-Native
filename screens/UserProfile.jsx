@@ -8,7 +8,7 @@ const UserProfile = () => {
   const user = useSelector((store) => store.user);
 
   return (
-    <SafeAreaView className="bg-black items-center min-h-screen">
+    <SafeAreaView className="flex-1 bg-black items-center min-h-screen">
       <StatusBar barStyle={"light-content"} />
       <View>
         <Header />

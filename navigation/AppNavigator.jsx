@@ -12,6 +12,7 @@ import Tickets from "../screens/Tickets";
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
+  const user = useSelector((store) => store.user.userData);
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
 
@@ -32,7 +33,6 @@ const AppNavigator = () => {
     checkLoggedInUser();
   }, []);
 
-  const user = useSelector((store) => store.user.userData);
   console.log("Store: ", user); // []
 
   if (loading) {

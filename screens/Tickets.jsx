@@ -14,7 +14,7 @@ import Header from "./components/Header";
 import { connectAxios } from "../lib/axios";
 import { useFocusEffect } from "@react-navigation/native";
 import midtransClient from "midtrans-client";
-import { connect, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const Tickets = () => {
   const user = useSelector((store) => store.user.userData);
@@ -90,6 +90,7 @@ const Tickets = () => {
 
   const confirPayment = () => {
     clearTickets();
+    setIsPaymentDone(false);
   };
 
   // Function to clear tickets
@@ -187,21 +188,25 @@ const Tickets = () => {
           ))}
         </View>
       </ScrollView>
-      <View className="mb-5">
+      <View className="items-center mb-10">
         <Text className="text-white font-bold text-xl py-3">
           Grand Total : Rp. {grandTotal}
         </Text>
-        <View className="flex-row">
+        <View className="flex-row" style={{ gap: 10 }}>
           <Button
             title="Make Payment"
             color={"green"}
             onPress={handlePayment}
           />
-          <Button
-            title="Confirm Payment"
-            color={"blue"}
-            onPress={confirPayment}
-          />
+          {isPaymentDone ? (
+            <Button
+              title="Confirm Payment"
+              color={"blue"}
+              onPress={confirPayment}
+            />
+          ) : (
+            ""
+          )}
         </View>
       </View>
     </SafeAreaView>
