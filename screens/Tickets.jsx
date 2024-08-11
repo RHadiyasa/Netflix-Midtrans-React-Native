@@ -27,7 +27,7 @@ const Tickets = () => {
   // Seup Midtrans
   const midtrans = new midtransClient.Snap({
     isProduction: false,
-    serverKey: "SB-Mid-server-TfW-s8rNKKbxCEE4OeDWHDtJ",
+    serverKey: process.env.MIDTRANS_SERVER_KEY,
   });
 
   const handlePayment = async () => {
