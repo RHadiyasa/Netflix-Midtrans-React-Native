@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "id": "d641",
+      "username": "rhadiyasa",
+      "email": "rafihadiyasa@gmail.com",
+      "password": "rafi123"
+    },
+    {
+      "id": "74bf",
+      "username": "rafi",
+      "email": "rafihadiyasa32@gmail.com",
+      "password": "rafi123"
+    },
+    {
+      "id": "b276",
+      "username": "rhadiyasa32",
+      "email": "rafihadiyasa32@gmail.com",
+      "password": "rafi123"
+    }
+  ],
+  "tickets": []
+}
